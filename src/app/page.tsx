@@ -13,7 +13,6 @@ export interface Room {
   id: number;
   name: string;
   description: string;
-  price: string;
   amenities: string[];
   images: string[];
   panoramaUrl: string;
