@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Amber palette — updated to #621A0F */
+  --color-amber-500: #8c6407;
+  --color-amber-600: #8c6407;
+  --color-amber-700: #8c6407;
 }
 
 @theme inline {
