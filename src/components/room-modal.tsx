@@ -32,27 +32,27 @@ export default function RoomModal({ room, onClose }: RoomModalProps) {
     const scriptEl = document.createElement("script");
     scriptEl.src = "https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js";
     scriptEl.onload = () => {
-      if (panoramaRef.current && (window as Record<string, unknown>).pannellum) {
-        const pannellum = (window as Record<string, unknown>).pannellum as {
+      if (panoramaRef.current && (window as any).pannellum) {
+        const pannellum = (window as any).pannellum as {
           viewer: (
             el: HTMLElement,
             config: Record<string, unknown>
           ) => { destroy: () => void };
         };
-        viewerRef.current = pannellum.viewer(panoramaRef.current, {
-          type: "equirectangular",
-          panorama: room.panoramaUrl,
-          autoLoad: true,
-          compass: false,
-          showZoomCtrl: true,
-          showFullscreenCtrl: false,
-          mouseZoom: true,
-          hfov: 110,
-          minHfov: 50,
-          maxHfov: 120,
-        });
-      }
-    };
+         viewerRef.current = pannellum.viewer(panoramaRef.current, {
+           type: "equirectangular",
+           panorama: room.panoramaUrl,
+           autoLoad: true,
+           compass: false,
+           showZoomCtrl: true,
+           showFullscreenCtrl: false,
+           mouseZoom: true,
+           hfov: 110,
+           minHfov: 50,
+           maxHfov: 120,
+         });
+       }
+     };
     document.head.appendChild(scriptEl);
 
     return () => {
