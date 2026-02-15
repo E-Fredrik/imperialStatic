@@ -87,9 +87,9 @@ export default function RoomsSection({ rooms, onSelectRoom }: RoomsSectionProps)
                   )}
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-amber-600 font-bold text-lg">
+                  {/* <span className="text-amber-600 font-bold text-lg">
                     {room.price}
-                  </span>
+                  </span> */}
                   <span className="text-sm text-gray-500 group-hover:text-amber-600 transition-colors">
                     <b>View Details →</b>
                   </span>
