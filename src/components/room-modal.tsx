@@ -113,9 +113,9 @@ export default function RoomModal({ room, onClose }: RoomModalProps) {
         {/* Room Details */}
         <div className="p-6">
           {/* Price */}
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <span className="text-3xl font-bold text-amber-600">{room.price}</span>
-          </div>
+          </div> */}
 
           {/* Description */}
           <div className="mb-6">
